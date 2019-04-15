@@ -1,0 +1,1385 @@
+\documentclass[a4paper,12pt,twoside]{article}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{nimbusmononarrow}
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[paper=a4paper,top=2cm,bottom=2cm,right=1cm,left=1cm]{geometry} % margini
+\usepackage[colorlinks=false,
+	allbordercolors={0.2 0.2 0.8},
+	pdfborderstyle={/S/U/W 1}]{hyperref}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+%\usepackage{quattrocento}
+
+\usepackage{colortbl}
+\usepackage[usenames,dvipsnames]{xcolor} 
+\usepackage{tcolorbox} 
+\usepackage{tabularx}
+\usepackage{array} 
+\usepackage{colortbl} 
+\usepackage{longtable}
+
+\tcbuselibrary{skins}
+
+
+ 
+  \tcbset{tab1/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title,
+  		overlay={
+  			
+  			{\begin{scope}[shift={([yshift=-5.15cm,xshift=19cm]frame.north west)},xscale=-1,yscale=-1] 
+  					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+  					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+  				\end{scope}
+  				\begin{scope}[shift={([yshift=-5.15cm]frame.north west)},xscale=1,yscale=-1] 
+  					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+  					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+  				\end{scope}
+  				\begin{scope}[shift={([yshift=0cm,xshift=0cm]frame.north west)},xscale=1,yscale=1] 
+  					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+  					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+  				\end{scope}
+  				\begin{scope}[shift={([yshift=0cm,xshift=19cm]frame.north west)},xscale=-1,yscale=1] 
+  					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+  					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+  				\end{scope} }}}}
+  	  
+  	  
+  	  
+  	  
+  	  
+  	  \tcbset{tab2/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title,
+  	  		overlay={
+  	  			
+  	  			{\begin{scope}[shift={([yshift=-3.45cm,xshift=19cm]frame.north west)},xscale=-1,yscale=-1] 
+  	  					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+  	  					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+  	  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+  	  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+  	  				\end{scope}
+  	  				\begin{scope}[shift={([yshift=-3.45cm]frame.north west)},xscale=1,yscale=-1] 
+  	  					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+  	  					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+  	  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+  	  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+  	  				\end{scope}
+  	  				\begin{scope}[shift={([yshift=0cm,xshift=0cm]frame.north west)},xscale=1,yscale=1] 
+  	  					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+  	  					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+  	  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+  	  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+  	  				\end{scope}
+  	  				\begin{scope}[shift={([yshift=0cm,xshift=19cm]frame.north west)},xscale=-1,yscale=1] 
+  	  					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+  	  					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+  	  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+  	  					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+  	  \end{scope} }}}}
+    
+    
+    
+     \tcbset{tab3/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title,
+    		overlay={
+    			
+    			{\begin{scope}[shift={([yshift=-4.6cm,xshift=19cm]frame.north west)},xscale=-1,yscale=-1] 
+    					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+    					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+    					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+    					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+    				\end{scope}
+    				\begin{scope}[shift={([yshift=-4.6cm]frame.north west)},xscale=1,yscale=-1] 
+    					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+    					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+    					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+    					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+    				\end{scope}
+    				\begin{scope}[shift={([yshift=0cm,xshift=0cm]frame.north west)},xscale=1,yscale=1] 
+    					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+    					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+    					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+    					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+    				\end{scope}
+    				\begin{scope}[shift={([yshift=0cm,xshift=19cm]frame.north west)},xscale=-1,yscale=1] 
+    					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+    					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+    					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+    					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+    \end{scope} }}}}
+
+
+\tcbset{tab4/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title,
+		overlay={
+			
+			{\begin{scope}[shift={([yshift=-6.45cm,xshift=19cm]frame.north west)},xscale=-1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=-6.45cm]frame.north west)},xscale=1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=0cm,xshift=0cm]frame.north west)},xscale=1,yscale=1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=0cm,xshift=19cm]frame.north west)},xscale=-1,yscale=1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+\end{scope} }}}}
+
+
+\tcbset{tab5/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title,
+		overlay={
+			
+			{
+				\begin{scope}[shift={([yshift=0cm,xshift=0cm]frame.north west)},xscale=1,yscale=1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=0cm,xshift=19cm]frame.north west)},xscale=-1,yscale=1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+\end{scope} }}}}
+
+\tcbset{tab6/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title,
+		overlay={
+			
+			{\begin{scope}[shift={([yshift=-3.95cm,xshift=19cm]frame.north west)},xscale=-1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=-3.95cm]frame.north west)},xscale=1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				 }}}}
+
+
+\tcbset{tab8/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title}}
+
+\tcbset{tab9/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title,
+		overlay={
+			
+			{\begin{scope}[shift={([yshift=-20cm,xshift=19cm]frame.north west)},xscale=-1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=-20cm]frame.north west)},xscale=1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				 }}}}
+			 
+\tcbset{tab10/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title,
+		overlay={
+			
+			{\begin{scope}[shift={([yshift=-6.35cm,xshift=19cm]frame.north west)},xscale=-1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=-6.35cm]frame.north west)},xscale=1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+}}}}
+
+\tcbset{tab11/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title,
+		overlay={
+			
+			{\begin{scope}[shift={([yshift=-6.12cm,xshift=19cm]frame.north west)},xscale=-1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=-6.12cm]frame.north west)},xscale=1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=0cm,xshift=0cm]frame.north west)},xscale=1,yscale=1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=0cm,xshift=19cm]frame.north west)},xscale=-1,yscale=1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+\end{scope} }}}}
+
+\tcbset{tab12/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title,
+		overlay={
+			
+			{\begin{scope}[shift={([yshift=-4.73cm,xshift=19cm]frame.north west)},xscale=-1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=-4.73cm]frame.north west)},xscale=1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=0cm,xshift=0cm]frame.north west)},xscale=1,yscale=1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=0cm,xshift=19cm]frame.north west)},xscale=-1,yscale=1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+\end{scope} }}}}
+
+\tcbset{tab13/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title,
+		overlay={
+			
+			{\begin{scope}[shift={([yshift=-7.45cm,xshift=19cm]frame.north west)},xscale=-1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=-7.45cm]frame.north west)},xscale=1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=0cm,xshift=0cm]frame.north west)},xscale=1,yscale=1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=0cm,xshift=19cm]frame.north west)},xscale=-1,yscale=1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+\end{scope} }}}}
+
+\tcbset{tab14/.style={enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily, colback=blue!5!white,colbacktitle=Salmon!40!white, coltitle=black,center title,
+		overlay={
+			
+			{\begin{scope}[shift={([yshift=-3cm,xshift=19cm]frame.north west)},xscale=-1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=-3cm]frame.north west)},xscale=1,yscale=-1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=0cm,xshift=0cm]frame.north west)},xscale=1,yscale=1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+				\end{scope}
+				\begin{scope}[shift={([yshift=0cm,xshift=19cm]frame.north west)},xscale=-1,yscale=1] 
+					\path [draw=gray!50!black, fill=gray!50] {[rotate=-30]  (0,1/8) -- (1/12,1/8) arc (90:270:-1/32 and 1/8) -- (0,-1/8) -- (-1/8,-1/8-1/8)arc (270:90:1/16 and 1/4) -- (0,1/8) }  --cycle; 
+					\path [draw=gray!50!black,fill=none]{[rotate=-30]  (0,1/8) arc (90:270:1/32 and 1/8)};
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/4,-1/6)  arc (270:90:-1/16 and 1/6)} ;
+					\path [draw=gray!50!black,fill=none]{[rotate=150] (1/3,-1/4)  arc (270:90:-1/10 and 1/4)} ;
+\end{scope} }}}}
+
+\usepackage{ wasysym }
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Beep Codes}
+\rhead{ \includegraphics[height=0.75cm]{weeeopen}}
+\cfoot{< \textbf{\thepage} >}
+
+\begin{document}
+	\begin{titlepage}
+		\vspace*{\stretch{1.0}}
+		\begin{center}
+			\Large \textbf{Beep Codes} 
+		\end{center}
+	\vspace*{\stretch{2.0}}
+	\end{titlepage}	
+	\section{HP and Compaq Desktop PCs-BIOS Beep Codes}
+	
+	
+
+
+	
+	
+		{\centering
+			
+
+			
+			I seguenti segnali acustici  possono verificarsi durante il ripristino, il flashing o l'aggiornamento del BIOS.
+			
+
+			
+		\begin{tcolorbox}[tab1,tabularx={X||X}]
+			\textbf{Beeps} & \textbf{Descrizione}  \\\hline\hline
+			1 beep breve                                                                                                    & Unità floppy legacy o unità CD/DVD non rilevata             \\\hline
+			2 beep brevi                                                                                                    & Dischetto floppy o CD non rilevato                                    \\\hline
+			
+			3 beep 
+			brevi
+			& Impossibile avviare il flashing
+			\ (ad esempio quando manca un'unità o un'immagine del BIOS)                                                                                \\ 
+			\hline
+			4 beep brevi
+			&     Flashing non riuscito (errore di checksum, immagine corrotta,ecc.)                                                                            \\ 
+			\hline
+			5 beep brevi
+			&     Ripristino del BIOS riuscito                                                                            \\ 
+			\hline
+			2 beep brevi, 2 beep lunghi
+			&     Ripristino del BIOS riuscito                                                                            \\
+		
+		\end{tcolorbox}
+
+
+	
+
+	%{\Large\bell} \textbf{NOTA:}
+	 
+
+	%I seguenti codici possono variare a seconda della versione del BIOS
+
+	\begin{tcolorbox}[tab2,tabularx={X||X}]
+		\textbf{Beeps} & \textbf{Descrizione}  \\\hline\hline
+		1 segnale acustico breve e 1 segnale acustico lungo                                                                                                   & Problema di memoria             \\\hline
+		2 suoni brevi e 1 segnale acustico lungo
+		
+
+		(si ripete 5 volte)                                                                                                    & Impossibile inizializzare video o scheda video necessaria ma non installata                               \\\hline
+		
+		3 beep 
+		brevi e 1 beep lungo
+		& Errore di configurazione della CPU o tipo di CPU non compatibile                                                                               \\ 
+		
+	\end{tcolorbox}
+
+	}
+
+
+
+
+
+	\subsection{Beep codes per American Megatrends, Inc (AMI) BIOS}
+	{\centering
+
+			
+
+	%	{\Large\bell} \textbf{NOTA:}
+		
+
+	%	Qui non sono elencati tutti i tipi di segnale acustico. I segnali acustici potrebbero variare.
+
+			
+	\begin{tcolorbox}[tab3,tabularx={X||X}]
+		\textbf{Beeps} & \textbf{Descrizione}  \\\hline\hline
+		1          & Errore di temporizzazione della memoria             \\\hline
+		2      & Errore di parità di memoria                               \\\hline
+		
+		3
+		& Errore di lettura o scrittura della memoria                                                                              \\\hline
+		
+		4,5,6,7
+		& Errori irreversibili relativi al funzionamento di componenti critici della scheda madre, ad esempio la CPU.
+		\\\hline
+		
+		8
+		& Memoria video
+		\\
+		
+	\end{tcolorbox}
+	La seguente tabella, elenca i codici acustici AMI che possono verificarsi quando si tenta di eseguire il flashing o il ripristino del BIOS. 
+	
+
+	
+
+	%{\Large\bell} \textbf{NOTA:}
+	
+
+	%Qui non sono elencati tutti i tipi di segnale acustico. I segnali acustici potrebbero variare.
+
+	
+	\begin{tcolorbox}[tab4,tabularx={X||X}]
+		\textbf{Beeps} & \textbf{Descrizione}  \\\hline\hline
+		1 & Nessun supporto rilevato             \\\hline
+		2  & File ROM non trovato nella directory principale                                    \\\hline
+		
+		3 
+		& Inserire il volume del supporto successivo                                                                                \\ 
+		\hline
+		4 
+		&     Programmazione Flash riuscita                                                                            \\ 
+		\hline
+		5 
+		&     Errore durante la lettura del file                                                                           \\ 
+		\hline
+		7
+		&      EPROM Flash non rilevato                                                                            \\
+		\hline
+		10
+		&
+		Errore durante la cancellazione della memoria flash
+		\\
+		\hline
+		11
+		&  	
+		Errore di programmazione flash
+		\\
+		\hline
+		12
+		& Problema con la dimensione del file ROM
+		\\
+		\hline
+		13
+		& L'immagine ROM non corrisponde ai parametri BIOS
+		\\
+		
+	\end{tcolorbox}
+
+
+
+%{\Large\bell} \textbf{NOTA:}
+
+
+%Qui non sono elencati tutti i tipi di segnale acustico. I segnali acustici potrebbero variare.
+
+
+\begin{tcolorbox}[tab5,tabularx={X||X}]
+	\textbf{Beeps} & \textbf{Descrizione}  \\\hline\hline
+	1 & Errore di aggiornamento della DRAM. C'è un problema nella
+	memoria di sistema o nella scheda madre.             \\\hline
+	2  & Errore di parità di memoria. Il circuito di parità non funziona correttamente.                                   \\\hline
+	
+	3 
+	& Errore 64K RAM di base. C'è un problema con il primo 64 KB di memoria di sistema.                                                                               \\ 
+	\hline
+	4 
+	&     Il timer di sistema non è operativo. C'è un problema con il timer (s) che controlla le funzioni sulla scheda madre.                           \\ 
+	\hline
+	5 
+	&     Fallimento del processore La CPU del sistema ha avuto esito negativo.                                                                           \\ 
+	\hline
+6
+	&      Gate A20 / Errore controller tastiera. Il controller IC della tastiera non funziona, impedendo al gate A20 di passare dalla modalità di protezione del processore.                         \\
+	\hline
+	7
+	&
+	Errore di eccezione in modalità virtuale.
+	\\
+	\hline
+	8
+	&  	
+	Errore di memoria video. Il BIOS non può scrivere nella memoria del buffer del frame sulla scheda video.
+	\\
+	\hline
+	9
+	& Errore di checksum della ROM. Il chip BIOS ROM sulla scheda madre è probabilmente difettoso.
+	\\
+	\hline
+	10
+	& Errore di checksum CMOS. Qualcosa sulla scheda madre
+	\\
+	
+\end{tcolorbox}
+
+\begin{tcolorbox}[tab6,tabularx={X||X}]
+	
+	11 & Cattiva memoria cache. Un errore nella memoria cache di livello 2.            \\\hline
+	1 segnale acustico lungo, 2 brevi  & Errore nel sistema video.                                   \\\hline
+	
+	1 segnale acustico lungo, 3 brevi 
+	& È stato rilevato un errore nella memoria sopra 64 KB.                                                                               \\ 
+	\hline
+	1 segnale acustico lungo, 8 brevi
+	&     Fallimento test display                                                                           \\ 
+	\hline
+	Sirena a due toni
+	&     Bassa velocità della ventola della CPU, problema del livello di tensione.                                                                          \\ 
+	
+\end{tcolorbox}
+    }
+	\subsection{Beep codes per Phoenix BIOS}
+	
+
+	
+	{\centering
+	Quattro serie di beep indicano un errore fatale, ovvero esiste un problema che impedisce l'avvio del computer. Ad esempio, potrebbero esserci: due segnali acustici,una breve pausa, un segnale acustico, una breve pausa, un segnale acustico, una breve pausa e poi tre segnali acustico; questo è rappresentato come 2-1-1-3 nella tabella qui sotto.
+	
+
+	%{\Large\bell} \textbf{NOTA:}
+	
+	%I seguenti codici possono variare a seconda della versione del BIOS
+
+	\begin{tcolorbox}[tab5,tabularx={X||X||X}]
+		\textbf{Beeps} & \textbf{Post Code} & \textbf{Descrizione}  \\\hline\hline
+		Un segnale acustico breve & 0 & Processo POST completato correttamente - avvio normale             \\\hline
+		1-1-1-1  &  & Codice bip non confermato. Riposizionare i chip RAM o sostituire i chip RAM come possibile soluzione.                                    \\
+		\hline
+		1-1-1-3  & 02h & Verifica della  modalità reale                                    \\\hline
+		
+		1-1-2-1 
+		& 04h & Individuazione del tipo di CPU                                                                               \\ 
+		\hline
+		1-1-2-3 
+		& 06h &    Inizializzazione l'hardware del sistema                                                                            \\ 
+		\hline
+		1-1-3-1 
+		& 08h &     Inizializzazione dei registri del chipset con i valori POST  iniziali                                                                           \\ 
+		\hline
+		1-1-3-2
+		& 09h &   Impostazione del flag POST                                                                             \\
+		\hline
+		1-1-3-3
+		& 0Ah &
+		Inizializzazione registri della CPU
+		\\
+		\hline
+		1-1-4-1
+		& 0Ch & Inizializzazione della cache sui valori POST iniziali
+		\\
+		\hline
+		1-1-4-3
+		& 0Eh & Inizializzazione dell' I / O
+		\\
+		\hline
+		1-2-1-1 & 10h
+		& Inizializzare Power Management
+		\\
+	\end{tcolorbox}
+
+\begin{tcolorbox}[tab8,tabularx={X||X||X}]
+1-2-1-2
+& 11h & Caricare registri alternativi con valori POST iniziali
+\\
+\hline
+1-2-1-3 & 12h
+& Passaggio a UserPatch0
+\\
+\hline
+1-2-2-1
+& 14h & Inizializzazione controller tastiera
+\\
+\hline
+1-2-2-3 & 16h
+&  	
+Checksum della ROM del BIOS
+\\
+\hline
+1-2-3-1
+& 18h & Inizializzazione del timer 8254
+\\
+\hline
+1-2-3-3 & 1Ah
+& Inizializzazione del controller DMA 8237
+\\
+\hline
+1-2-4-1
+& 1Ch & Reimpostazione del controller di interrupt programmabile
+\\
+\hline
+1-3-1-1 & 20h
+& Test aggiornamento DRAM
+\\
+\hline
+1-3-1-3
+& 22h & Test controller tastiera 8742
+\\
+\hline
+1-3-2-1 & 24h
+& Impostazione del registro del segmento ES su 4 GB
+\\
+\hline
+1-3-3-1
+& 28h & Dimensionamento automatico DRAM
+\\
+\hline
+1-3-3-3 & 2Ah
+& Cancellazione della RAM di base da 512 KB
+\\
+\hline
+1-3-4-1
+& 2Ch &  	
+Verifica delle righe indirizzi di base 512
+\\
+\hline
+1-3-4-3 & 2Eh
+& Verifica della memoria di base da 512 KB
+\\
+\hline
+1-4-1-3
+& 32h & Test frequenza bus-clock CPU
+\\
+\hline
+1-4-2-1 & 34h
+&  	
+Errore di lettura/scrittura della RAM del CMOS
+\\
+\hline
+1-4-2-4
+& 37h & Reinizializzare il chipset
+\\
+\hline
+1-4-3-1 & 38h
+& Shadowing della ROM del BIOS di sistema
+\\
+\hline
+1-4-3-2
+& 39h & Reinizializzazione la cache
+\\
+\hline
+1-4-3-3
+& 3Ah & Dimensionamento automatico della cache
+\\
+\hline
+1-4-4-1
+& 3Ch & Configurazione dei registri avanzati del chipset
+\\
+\hline
+1-4-4-2
+& 3Dh & Carica i registri alternativi con valori CMOS
+\\
+\hline
+2-1-1-1
+& 40h & Impostazione della velocità iniziale della CPU
+\\
+\hline
+2-1-1-3
+& 42hs &  	
+Inizializzazione del vettore di interrupt
+\\
+\hline
+2-1-2-1
+& 44h &  	
+Inizializzazione degli interrupt del BIOS
+\\
+\hline
+2-1-2-3
+& 46h & Verifica delle informazioni sul copyright della ROM
+\\
+\hline
+2-1-2-4
+& 47h & Inizializzazione del programma di gestione per le ROM delle opzioni PCI
+\\
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[tab8,tabularx={X||X||X}]
+	2-1-3-1
+	& 48h & Confronto della configurazione video e CMOS
+	\\
+	\hline
+	2-1-3-2
+	& 49h & Inizializzazione delle periferiche e del bus PCI
+	\\
+	\hline
+	2-1-3-3
+	& 4Ah &  	
+	Inizializzazione di tutte le schede video nel sistema
+	\\
+	\hline
+	2-1-4-1
+	& 4Ch & Shadowing della ROM del BIOS video
+	\\
+	\hline
+	2-1-4-3
+	& 4Eh & Visualizzazione delle informazioni sul copyright
+	\\
+	\hline
+	2-2-1-1
+	& 50h & Visualizzazione del tipo e della velocità della CPU
+	\\
+	\hline
+	2-2-1-3
+	& 52h & Prova tastiera
+	\\
+	\hline
+	2-2-2-1 & 54h
+	& Impostazione del clic dei tasti, se abilitato
+	\\
+	\hline
+	2-2-2-3
+	& 56h & Attivazione tastiera
+	\\
+	\hline
+	2-2-3-1 & 58h
+	& Verifica degli interrupt imprevisti
+	\\
+	\hline
+	2-2-3-3
+	& 5Ah & Visualizzazione del messaggio "Premere F2 per accedere a CONFIGURAZIONE"
+	\\
+	\hline
+	2-2-4-1 & 5Ch
+	& Test RAM tra 512 e 640KB
+	\\
+	\hline
+	2-3-1-1
+	& 60h &  	
+	Verifica della memoria estesa
+	\\
+	\hline
+	2-3-1-3 & 62h
+	& Verifica delle righe degli indirizzi della memoria estesa
+	\\
+	\hline
+	2-3-2-1
+	& 64h & Passaggio  a UserPatch1
+	\\
+	\hline
+	2-3-2-3 & 66h
+	& Configurazione dei registri avanzati della cache
+	\\
+	\hline
+	2-3-3-1
+	& 68h & Abilitazione delle cache esterna e della CPU
+	\\
+	\hline
+	2-3-3-2 & 69h
+	& Inizializzazione dell’handler SMI
+	\\
+	\hline
+	2-3-3-3
+	& 6Ah &  	
+	Visualizzazione delle dimensioni della cache esterna
+	\\
+	\hline
+	2-3-4-1 & 6Ch
+	& Visualizzazione del messaggio di shadowing
+	\\
+	\hline
+	2-3-4-3
+	& 6Eh &  	
+	Visualizzazione dei segmenti non eliminabili
+	\\
+	\hline
+	2-4-1-1 & 70h
+	&  	
+	Visualizzazione dei messaggi di errore
+	\\
+	\hline
+	2-4-1-3
+	& 72h & Controllo della presenza di errori di configurazione
+	\\
+	\hline
+	2-4-2-1 & 74h
+	& Verifica dell’orologio in tempo reale
+	\\
+	\hline
+	2-4-2-3
+	& 76h & Controllo della presenza di errori della tastiera
+	\\
+	\hline
+	2-4-4-1
+	& 7Ch &  	
+	Impostazione dei vettori di interrupt hardware
+	\\
+	
+	
+\end{tcolorbox}
+
+\begin{tcolorbox}[tab8,tabularx={X||X||X}]
+2-4-4-3
+& 7Eh & Verifica del coprocessore, se presente
+\\
+\hline
+3-1-1-1
+& 80h & Disattivazione delle porte I/O sulla scheda
+\\
+\hline
+3-1-1-3
+& 82h & Rilevamento e installazione delle porte esterne RS232
+\\
+\hline
+3-1-2-1
+& 84h & Rilevamento e installazione delle porte parallele esterne
+\\
+\hline
+3-1-2-3
+& 86h & Reinizializzazione delle porte I/O sulla scheda
+\\
+\hline
+3-1-3-1
+& 88h & Inizializzazione dell’area dati del BIOS
+\\
+\hline
+3-1-3-3
+& 8Ah & Inizializzazione dell’area dati estesa del BIOS
+\\
+\hline
+3-1-4-1
+& 8Ch & Inizializzazione del controller del floppy disk
+\\
+3-2-1-1
+& 90h & Inizializzazione del controller del disco rigido
+\\
+\hline
+3-2-1-2
+& 91h & Inizializzazione del controller del disco rigido sul bus locale
+\\
+\hline
+3-2-1-3
+& 92h & Passaggio a UserPatch2
+\\
+\hline
+3-2-2-1
+& 94h & Disattivazione della riga dell’indirizzo A20
+\\
+\hline
+3-2-2-3
+& 96h & Cancellazione del registro del segmento ES di grandi dimensioni
+\\
+\hline
+3-2-3-1
+& 98h & Ricerca di ROM opzionali
+\\
+\hline
+3-2-3-3
+& 9Ah & Shadowing delle ROM opzionali
+\\
+\hline
+3-2-4-1
+& 9Ch & Impostazione del risparmio di energia
+\\
+\hline
+3-2-4-3
+& 9Eh & Attivazione degli interrupt hardware
+\\
+\hline
+3-3-1-1
+& A0h & Impostazione dell’ora
+\\
+\hline
+3-3-1-3
+& A2h & Controllo del blocco dei tasti
+\\
+\hline
+3-3-3-1
+& A8h & Cancellazione del messaggio F2
+\\
+\hline
+3-3-3-3
+& Aah & Ricerca della pressione del tasto F2
+\\
+\hline
+3-3-4-1
+& AChP & Accedere a CONFIGURAZIONE
+\\
+\hline
+3-3-4-3
+& Aeh & Cancellazione del flag in-POST
+\\
+\hline
+3-4-1-1
+& B0h & Controllo della presenza di errori
+\\
+\hline
+3-4-1-3
+& B2h & POST eseguito. Preparazione al riavvio del sistema operativo.
+\\
+\hline
+3-4-2-1
+& B4h & Un bip
+\\
+\hline
+3-4-2-3
+& B6h & Verifica della password (facoltativa)
+\\
+\hline
+3-4-3-1
+& B8h & Cancellazione della tabella GDT
+\\
+\hline
+3-4-4-1
+& BCh & Cancellazione dei controlli di parità
+\\
+
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[tab9,tabularx={X||X||X}]
+	3-4-4-3
+	& Beh & Cancellazione dello schermo (facoltativa)
+	\\
+	\hline
+	3-4-4-4
+	& BFh &  	
+	Controllo dei promemoria dei virus e di backup
+	\\
+	\hline
+	4-1-1-1
+	& C0h &  	
+	Tentativo di riavviare con INT 19
+	\\
+	\hline
+	4-2-1-1
+	& D0h & Errore dell’handler di interrupt
+	\\
+	\hline
+	4-2-1-3
+	& D2h & Errore di interrupt sconosciuto
+	\\
+	\hline
+	4-2-2-1
+	& D4h & Errore di interrupt in sospeso
+	\\
+	\hline
+	4-2-2-3
+	& D6h & Errore di inizializzazione della ROM opzionale
+	\\
+	\hline
+	4-2-3-1
+	& D8h & Errore di chiusura del sistema
+	\\
+	\hline
+	4-2-3-3
+	& Dah & Spostamento dei blocchi estesi
+	\\
+	\hline
+	4-2-4-1
+	& DCh & Errore di chiusura del sistema
+	\\
+	\hline
+	4-2-4-3
+	& Deh & Errore del controller della tastiera
+	\\
+	\hline
+	4-3-1-3
+	& E2h & Inizializzazione del chipset
+	\\
+	4-3-1-4 & E3h &  	
+	Inizializzazione del contatore di aggiornamento           \\\hline
+	4-3-2-1  & E4h &  	
+	Controllo del Forced Flash                                 \\\hline
+	
+	4-3-2-2 
+	& E5h & Controllo dello stato hardware della ROM                                                                               \\ 
+	\hline
+	4-3-2-3 
+	& E6h &    La ROM del BIOS funziona                                                                           \\ 
+	\hline
+	4-3-2-4
+	& E7h &    Esecuzione di un test competo della RAM                                                                          \\ 
+	\hline
+	4-3-3-1
+	& E8h &    Inizializzazione OEM                                                                           \\
+	\hline
+	4-3-3-2
+	& E9h &
+	 	
+	Inizializzazione del controller di interrupt
+	\\
+	\hline
+	4-3-3-3
+	& Eah & Errore nel codice bootstrap
+	\\
+	\hline
+	4-3-3-4
+	& Ebh & Inizializzazione di tutti i vettori
+	\\
+	\hline
+	4-3-4-1 & Ech
+	&  	
+	Riavvio del programma Flash
+	\\
+	\hline
+	4-3-4-2 & Edh
+	&  	
+	Inizializzazione del dispositivo di avvio
+	\\
+	\hline
+	4-3-4-3 & Eeh
+	&  	
+	La lettura del codice di avvio è corretta
+	\\
+	\hline
+	Sirena a due toni & 
+	&  	
+	Bassa velocità della ventola della CPU, problema del livello di tensione.
+	\\
+	
+\end{tcolorbox}
+
+	
+
+%{\Large\bell} \textbf{NOTA:}
+
+%I seguenti codici possono variare a seconda della versione del BIOS
+
+\begin{tcolorbox}[tab5,tabularx={X||X}]
+	\textbf{Beeps} & \textbf{Descrizione e cosa controllare}  \\\hline\hline
+	Un segnale acustico continuo &  Un problema con la memoria o il video.            \\\hline
+	1-1-1-3  & CPU / scheda madre difettosa. Verifica la modalità reale.                                   \\
+	\hline
+	1-1-1-3  & Verifica della  modalità reale                                    \\
+\end{tcolorbox}
+
+\begin{tcolorbox}[tab8,tabularx={X||X}]
+	
+	1-1-2-1  &  CPU / scheda madre difettosa.            \\\hline
+	1-1-2-3 & Scheda madre difettosa o uno dei suoi componenti.                                   \\
+	\hline
+	1-1-3-1  & Scheda madre difettosa o uno dei suoi componenti. Inizializza i registri del chipset con i valori POST iniziali.                                   \\
+	\hline
+	1-1-3-2  & Scheda madre difettosa o uno dei suoi componenti.                                  \\
+	\hline
+	1-1-3-1   & Scheda madre difettosa o uno dei suoi componenti. Inizializza i registri del chipset con i valori POST iniziali.                                   \\
+	\hline
+	1-1-3-2 & Scheda madre difettosa o uno dei suoi componenti.                                 \\
+	\hline
+	1-1-3-3  & Scheda madre difettosa o uno dei suoi componenti. Inizializza i registri della CPU.                                  \\
+	\hline
+1-1-3-4  & Errore nei primi 64 KB di memoria.                                    \\
+	\hline
+	1-1-4-1  & Errore di cache di livello 2.                                   \\
+	\hline
+	1-1-4-3  & Errore porta I / O.                                  \\
+	\hline
+	1-2-1-1  & Errore di gestione dell'alimentazione.                                \\
+	\hline
+	1-2-1-3  & Scheda madre difettosa o uno dei suoi componenti.                                  \\
+	\hline
+	1-2-2-1   & Errore del controller della tastiera.                                 \\
+	\hline
+	1-2-2-3  & Errore ROM del BIOS.                                 \\
+	\hline
+	1-2-3-1  & Errore del timer di sistema.                                 \\
+	\hline
+	1-2-3-3 & Errore DMA.                                 \\
+	\hline
+	1-2-4-1  & Errore del controller IRQ.                                 \\
+	\hline
+	1-3-1-1   & Errore di aggiornamento della DRAM.                                \\
+	\hline
+	1-3-1-3  & Guasto alla porta A20.                                 \\
+	\hline
+	1-3-2-1 & Scheda madre difettosa o uno dei suoi componenti.                                  \\
+	\hline
+	1-3-3-1  & Errore di memoria estesa.                                 \\
+	\hline
+	1-3-4-3 & Errore nel primo 1 MB di memoria di sistema.                                 \\
+	\hline
+	1-4-2-4  & Errore della CPU.                                  \\
+	\hline
+	2-1-4-1 & Errore shadow del BIOS ROM.                                 \\
+	\hline
+	1-4-3-3 & Errore di cache di livello 2.                                \\
+	\hline
+	2-1-1-1 & Scheda madre difettosa o uno dei suoi componenti.                                 \\
+	\hline
+	2-1-2-1 & Errore IRQ.                                 \\
+	\hline
+	2-1-2-3 & Errore ROM del BIOS.                                 \\
+	\hline
+	2-1-3-2 & Guasto della porta I / O.                                 \\
+	\hline
+	2-1-3-3 & Errore del sistema video.                               \\
+	\hline
+	2-1-2-1  & Errore IRQ.                               \\
+	\hline
+	2-1-2-3 & Errore ROM del BIOS.                                \\
+	\hline
+	2-1-2-4 & Guasto della porta I / O.                                 \\
+	\hline
+	2-2-1-1 & Errore della scheda video.                               \\
+	\hline
+	2-3-3-3   & Errore del controller della tastiera.                                \\
+	\hline
+	2-2-3-1  & Errore IRQ.                             \\
+	\hline
+	2-2-4-1  & Errore nel primo 1 MB di memoria di sistema.                               \\
+	\hline
+	2-3-3-3  & Errore di memoria estesa.                             \\
+	\hline
+	2-3-2-1  & Scheda madre difettosa o uno dei suoi componenti.                             \\
+	\hline
+	2-3-3-1 & Errore di cache di livello 2.                              \\
+\end{tcolorbox}
+
+\begin{tcolorbox}[tab8,tabularx={X||X}]
+	
+	2-3-4-3  &  Errore della scheda madre o della scheda video.           \\\hline
+	2-4-1-1  & Errore della scheda madre o della scheda video.                                  \\
+	\hline
+	2-4-1-3  & Scheda madre difettosa o uno dei suoi componenti.                                  \\
+	\hline
+	2-4-2-1  & Errore RTC.                                 \\
+	\hline
+	2-4-2-3    & Errore del controller della tastiera.                                   \\
+	\hline
+	2-4-4-1 & Errore IRQ.                                \\
+	\hline
+	3-1-2-3   & Errore porta I / O.                                \\
+	\hline
+	3-1-3-3  & Scheda madre difettosa o uno dei suoi componenti.                                   \\
+	\hline
+	3-2-1-2 & Guasto dell'unità floppy o del disco rigido.                                 \\
+	\hline
+	3-2-1-3  & Scheda madre difettosa o uno dei suoi componenti.                                 \\
+	\hline
+	3-2-4-3  & Errore IRQ.                   \\
+	\hline
+	3-3-1-1   & Errore RTC.                                 \\
+	\hline
+	3-3-1-3  & Errore blocco tastiera.                                \\
+	\hline
+	3-3-3-3  & Scheda madre difettosa o uno dei suoi componenti.                                \\
+	\hline
+	3-4-4-4  & Scheda madre difettosa o uno dei suoi componenti.                                \\
+	4-1-1-1  & Guasto dell'unità floppy o del disco rigido.                               \\
+	\hline
+	4-2-2-1   & Errore IRQ.                               \\
+	\hline
+	4-2-4-1   & Scheda madre difettosa o uno dei suoi componenti.                              \\
+	\hline
+	4-2-4-3  & Errore del controller della tastiera.                                \\
+	\hline
+	4-3-4-3  & Scheda madre difettosa o uno dei suoi componenti.                                 \\
+	\hline
+	4-3-3-4  & Errore IRQ.                                \\
+	\hline
+	4-3-4-2 & Guasto dell'unità floppy o del disco rigido.                                \\
+	\hline
+	1-1-2 & CPU / scheda madre difettosa.                                 \\
+	\hline
+	1-1-3  & Errore di lettura / scrittura della scheda madre / CMOS difettoso.                                 \\
+	\hline
+	1-1-4 & Errore di checksum BIOS / BIOS ROM errato.                             \\
+	\hline
+	1-2-1  & Il timer di sistema non è operativo. C'è un problema con il timer (s) che controlla le funzioni sulla scheda madre.                                \\
+	\hline
+	1-2-3 & Scheda madre difettosa / errore DMA.                               \\
+	\hline
+	1-3-1  & Errore di aggiornamento della memoria.                             \\
+	\hline
+	1-3-4  & Errore nei primi 64 KB di memoria.                             \\
+	\hline
+	1-4-1  & Guasto della linea indirizzo.                              \\
+	\hline
+	1-4-2  & Errore di RAM di parità.                            \\
+	\hline
+	1-4-3  & Errore nel timer.                                \\
+	\hline
+	1-4-4  & Guasto alla porta NMI.                              \\
+	\hline
+	2- -  & Qualsiasi combinazione di segnali acustici dopo 2 indica un errore nei primi 64 KB di memoria.                              \\
+	\hline
+	3-1-1    & Errore Master DMA.                               \\
+	\hline
+	3-1-2  & Errore DMA slave.                           \\
+	\hline
+	3-1-4  & Interrompere l'errore del controller.                              \\
+	\hline
+	3-2-4  & Errore del controller della tastiera.                           \\
+	\hline
+	3-3-2  & Errore CMOS.                             \\
+	\hline
+	3-3-4  & Errore della scheda video.                            \\
+	\hline
+	3-4-1  & Errore della scheda video.                            \\
+\end{tcolorbox}
+
+\begin{tcolorbox}[tab10,tabularx={X||X}]
+3-1-1    & Errore Master DMA.                               \\
+\hline
+4-2-1   & Errore nel timer.                          \\
+\hline
+4-2-2   & Errore di arresto del CMOS.                              \\
+\hline
+4-2-3  & Errore Gate A20.                           \\
+\hline
+4-2-4  & Interruzione imprevista in modalità protetta.                            \\
+\hline
+4-3-1  & Errore nel test della RAM.                           \\
+\hline
+4-3-3  & Errore nel timer.                           \\
+\hline
+4-3-4  & Errore dell'orologio dell'ora del giorno.                          \\
+\hline
+4-4-1  & Errore della porta seriale.                          \\
+\hline
+4-4-2   & Guasto della porta parallela.                           \\
+\hline
+4-4-3   & Coprocessore matematico.                       \\
+\end{tcolorbox}
+    }
+	
+
+	
+
+	
+
+	
+	\section{Beep codes per Award BIOS}
+	{\centering
+		
+
+			
+
+		%{\Large\bell} \textbf{NOTA:}
+		
+		%I seguenti codici possono variare a seconda della versione del BIOS.
+		
+		Se vengono rilevati altri problemi hardware correggibili, il BIOS visualizza un messaggio.
+		
+
+		
+	\begin{tcolorbox}[tab11,tabularx={X||X}]
+		\textbf{Beeps} & \textbf{Descrizione}  \\\hline\hline
+		1 lungo, 2 brevi    & Indica che un errore video si è verificato e il BIOS non può inzializzare lo schermo video per visualizzare informazioni supplementari                            \\
+		\hline
+		1 lungo, 3 brevi   & Scheda video non rilevata (reinserire la scheda video) o scheda video difettosa                         \\
+		\hline
+		Beeps ripetuti  & Problemi di RAM                              \\
+		\hline
+		Segnale acustico ripetuto ad alta frequenza mentre il PC è in esecuzione & Surriscaldamento processore (CPU)                          \\
+		\hline
+		Beep alternati ripetuti ad alta e bassa frequenza  & Problema con il processore (CPU), eventualmente danneggiato.                            \\
+	\end{tcolorbox}
+}
+\newpage
+\section{Beep codes per Dell}
+
+
+
+
+
+{\centering
+	\begin{tcolorbox}[tab12,tabularx={X||X}]
+		\textbf{Beeps} & \textbf{Descrizione}  \\\hline\hline
+		1    & BIOS ROM corrotta o guasta                         \\
+		\hline
+		2  & Memoria ( RAM ) non rilevata.                       \\
+		\hline
+		3  & Scheda madre guasta                            \\
+		\hline
+		4 & Memoria ( RAM ) guasta                          \\
+		\hline
+		5  & Batteria CMOS guasta                           \\
+		\hline
+		6  & Scheda video guasta                            \\
+		\hline
+		7  & Processore (CPU) difettosa                            \\
+	\end{tcolorbox}
+}
+
+
+
+
+\section{Beep codes per IBM BIOS}
+{\centering
+	
+
+	
+
+
+	%{\Large\bell} \textbf{NOTA:}
+	
+	%I seguenti codici possono variare a seconda della versione del BIOS.
+	
+
+	\begin{tcolorbox}[tab13,tabularx={X||X}]
+		\textbf{Beeps} & \textbf{Descrizione}  \\\hline\hline
+		Nessun segnale acustico    & Nessuna alimentazione                        \\
+		\hline
+		1 bip breve & POST normale, il computer è ok                       \\
+		\hline
+		2 brevi beep  & Errore POST, revisionare lo schermo per il codice errore                           \\
+		\hline
+		Beep continuo & No power, loose card, or short.                       \\
+		\hline
+		Brevi beep ripetuti & No power, loose card, or short.                          \\
+		\hline
+		1 lungo e 1 breve  & Problema alla scheda madre                            \\
+		\hline
+		1 lungo e 2 brevi  & Problema video (Mono/CGA circuiti di visualizzazione)                           \\
+		\hline
+		1 lungo e 3 brevi  & Video (EGA) circuiti di visualizzazione                          \\
+		\hline
+		3 lunghi  & Errore tastiera o scheda tastiera                          \\
+		\hline
+		1 segnale acustico, display vuoto o non corretto  & Video circuiti di visualizzazione                           \\
+	\end{tcolorbox}
+}
+
+
+
+
+
+\section{Toni di avvio Macintosh}
+{\centering
+	
+
+	
+
+
+	%{\Large\bell} \textbf{NOTA:}
+	
+	%I seguenti codici possono variare a seconda della versione del BIOS.
+	
+
+	\begin{tcolorbox}[tab14,tabularx={X||X}]
+		\textbf{Toni} & \textbf{Errore}  \\\hline\hline
+		Tono di errore. (Due serie di diverse tonalità)    & Problemi con scheda logica o bus SCSI.                        \\
+		\hline
+		Tono di avvio, le rotazioni di unità, non il video & POST normale, il computer è ok                       \\
+		\hline
+		Acceso, nessun tono  & Problema della scheda logica                         \\
+		\hline
+		Tono alto, quattro toni più alti. & Problema con SIMM.                      \\
+		
+	\end{tcolorbox}
+}
+
+	\newpage
+	\tableofcontents
+	
+\end{document}
